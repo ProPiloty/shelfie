@@ -80,6 +80,7 @@ class Form extends Component {
     render(){
         return(
             <div>
+                <img src={this.state.imageURLInput} />
                 <form>
                     <input placeholder="Product Name" name='productNameInput' value={this.state.productNameInput} onChange={this.handleInputChange} />
                     <input placeholder="Price" name='priceInput' value={this.state.priceInput} onChange={this.handleInputChange} />

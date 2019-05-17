@@ -1,0 +1,10 @@
+.App {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashAndForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

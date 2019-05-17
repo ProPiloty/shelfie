@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios from'axios';
+
+// STYLESHEETS
 import './reset.css';
 import './App.css';
 

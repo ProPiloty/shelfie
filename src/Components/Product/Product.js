@@ -1,12 +1,14 @@
 import React from 'react';
 
 const Product = (props) => {
-    const { id, name, price, imageURL } = props.product;
+    const { id, name, price, image_url } = props.product;
     const { handleDeleteProduct, setSelectedProduct, product } = props;
+
+    console.log(image_url);
 
     return(
         <div>
-            <img src={imageURL} />
+            <img src={image_url} />
             <div>
                 <div>
                     <h3>{name}</h3>
