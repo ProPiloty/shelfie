@@ -16,8 +16,8 @@ massive(CONNECTION_STRING)
         app.set('db', database);
         console.log('Database connection running');
         
-        app.listen(4000, () => {
-            console.log(`Server is listening on port 4000`);
+        app.listen(SERVER_PORT, () => {
+            console.log(`Server is listening on port ${SERVER_PORT}`);
         });
     })
     .catch(err => console.log(err));
@@ -25,3 +25,5 @@ massive(CONNECTION_STRING)
 // ENDPOINTS
 app.get('/api/inventory', ctrl.getInventory); // GETS ALL PRODUCTS FROM DB
 app.post('/api/product', ctrl.addProduct); // ADDS PRODUCT TO DB
+app.delete('/api/product/:id', ctrl.deleteProduct) // DELETES A PRODUCT BY ID
+app.put('/api/product/:id', ctrl.updateProduct) // UPDATES A PRODUCT BY ID

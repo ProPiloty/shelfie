@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from'axios';
+import './reset.css';
 import './App.css';
 
 // COMPONENTS
@@ -13,6 +14,7 @@ class App extends Component {
 
     this.state = {
       inventory: [],
+      selectedProduct: {},
     }
   }
 
@@ -28,16 +30,22 @@ class App extends Component {
       })
   }
 
+  setSelectedProduct = (product) => {
+    this.setState ({
+      selectedProduct: product,
+    })
+  }
+
   render(){
 
-    const {inventory} = this.state;
+    const { inventory, selectedProduct } = this.state;
 
     return (
       <div className="App">
         <Header />
-        <section>
-          <Dashboard inventory={inventory} />
-          <Form getInventory={this.componentDidMount}/>
+        <section className="dashAndForm">
+          <Dashboard inventory={inventory} getInventory={this.componentDidMount} setSelectedProduct={this.setSelectedProduct} />
+          <Form getInventory={this.componentDidMount} selectedProduct={selectedProduct}/>
         </section>
       </div>
     );

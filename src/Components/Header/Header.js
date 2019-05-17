@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import './Header.css';
+
 class Header extends Component {
     constructor(){
         super();
@@ -7,7 +9,10 @@ class Header extends Component {
 
     render(){
         return(
-            <div>Header</div>
+            <div className="Header">
+                <img src="https://raw.githubusercontent.com/ProPiloty/simulation-1/master/assets/shelfie_icon.png" className="shelfieLogo" />
+                <h1 className="siteTitle">Shelfie</h1>
+            </div>
         )
     } 
 }
