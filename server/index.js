@@ -23,3 +23,5 @@ massive(CONNECTION_STRING)
     .catch(err => console.log(err));
 
 // ENDPOINTS
+app.get('/api/inventory', ctrl.getInventory); // GETS ALL PRODUCTS FROM DB
+app.post('/api/product', ctrl.addProduct); // ADDS PRODUCT TO DB
