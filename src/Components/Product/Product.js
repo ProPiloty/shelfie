@@ -1,15 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Product extends Component {
-    constructor(){
-        super();
-    }
+const Product = (props) => {
+    const { name, price, imageURL } = props.product;
+    return(
+        <div>
+            <img src={imageURL} />
+            <div>
+                <h3>{name}</h3>
+                <h4>{price}</h4>
+            </div>
+        </div>
+    )
 
-    render(){
-        return(
-            <div>Product</div>
-        )
-    }
 }
 
 export default Product;

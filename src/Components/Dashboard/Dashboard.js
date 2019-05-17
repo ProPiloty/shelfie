@@ -1,21 +1,20 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 // COMPONENTS
 import Product from '../Product/Product';
 
-class Dashboard extends Component {
-    constructor(){
-        super();
-    }
+const Dashboard = (props) => {
+    const mappedProducts = props.inventory.map((product, i) => (
+        <Product key={i} product={product} />
+    ))
 
-    render(){
-        return(
-            <div>
-                <p>Dashboard</p>
-                <Product />
-            </div>
-        )
-    }
+    return(
+        <div>
+            <p>Dashboard</p>
+            {mappedProducts}
+        </div>
+    )
+
 };
 
 export default Dashboard;
